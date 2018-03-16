@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Write your thoughts</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
           th:errors="*{content}"></div><br/>
     <br/>
     Post Date <br/>
-    <input type="text" th:field="*{postDate}"/>
+    <input type="date" th:field="*{postDate}"/>
     <div th:if="${#fields.hasErrors('postDate')}"
           th:errors="*{postDate}"></div><br/>
     <br/><br/>
