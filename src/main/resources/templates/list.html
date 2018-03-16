@@ -2,25 +2,26 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Messages</title>
+    <link rel="stylesheet" href="/stylesheet.css">
 </head>
 <body>
-<a href="/add">Add a Course</a><br/>
-<table>
+<a  class="myredclass" href="/add"> Add a Thought!!</a><br/>
+<table align="center">
     <tr>
-        <th>Title</th>
-        <th>Instructor</th>
-        <th>Credits</th>
-        <td>Actions</td>
+        <th>Post By</th><br/>
+        <th>Thoughts</th><br/>
+        <th>Post Date</th><br/>
+        <!--<td>Actions</td>-->
     </tr>
-    <tr th:each="course : ${courses}">
-        <td th:text="${course.title}"></td>
-        <td th:text="${course.instructor}"></td>
-        <td th:text="${course.credit}"></td>
+    <tr th:each="message : ${message}">
+        <td th:text="${message.writer}"></td>
+        <td th:text="${message.content}"></td>
+        <td th:text="${message.postDate}"></td>
         <td>
-            <a th:href="@{/update/{id}(id=${course.id})}">Update</a>
+          <!--  <a th:href="@{/update/{id}(id=${course.id})}">Update</a>
             <a th:href="@{/detail/{id}(id=${course.id})}">Details</a>
-            <a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>
+            <a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>-->
         </td>
     </tr>
 </table>

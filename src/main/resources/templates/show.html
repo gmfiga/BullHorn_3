@@ -5,11 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="/">Show All Courses</a><br/>
-    Title :<span th:text="${course.title}"></span><br/>
-    Instructor :<span th:text="${course.instructor}"></span><br/>
-    Description :<p th:text="${course.description}"></p>
-    Credits :<span th:text="${course.credit}"></span><br/>
-    <a th:href="@{/delete/{id}(id=${course.id})}">Delete this course</a>
+    <a href="/">Show All Messages</a><br/>
+    Post By :<span th:text="${message.writer}"></span><br/>
+    <p th:text="${message.content}"></p>
+    post date :<span th:text="${message.postDate}"></span><br/>
+    <!--<a th:href="@{/delete/{id}(id=${course.id})}">Delete this course</a>-->
 </body>
 </html>
